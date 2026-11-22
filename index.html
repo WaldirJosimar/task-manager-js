@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Mis tareas</h1>
+    <p id="advice" class="advice">Cargando consejo del día…</p>
+
+    <form id="task-form">
+      <label for="task-input" class="sr-only">Nueva tarea</label>
+      <input id="task-input" type="text" placeholder="¿Qué tienes que hacer?" maxlength="120" required>
+      <button type="submit">Añadir tarea</button>
+    </form>
+
+    <div class="filters" role="group" aria-label="Filtrar tareas">
+      <button data-filter="all" aria-pressed="true">Todas</button>
+      <button data-filter="pending" aria-pressed="false">Pendientes</button>
+      <button data-filter="done" aria-pressed="false">Hechas</button>
+    </div>
+
+    <ul id="task-list"></ul>
+    <p id="counter" class="counter"></p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
